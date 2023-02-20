@@ -91,3 +91,40 @@ hamburger.addEventListener('click', () => {
     //Hamburger Animation
     hamburger.classList.toggle("active");
 });
+
+
+
+//! Back To Top
+
+let mybutton = document.getElementById("btn-back-to-top");
+
+// When the user scrolls down 800px from the top of the document, show the button
+window.onscroll = function () {
+    scrollFunction();
+};
+
+function scrollFunction() {
+    if (
+        document.body.scrollTop > 800 ||
+        document.documentElement.scrollTop > 800
+    ) {
+        mybutton.style.display = "block";
+    } else {
+        mybutton.style.display = "none";
+    }
+}
+// When the user clicks on the button, scroll to the top of the document
+mybutton.addEventListener("click", backToTop);
+
+function backToTop() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+}
+
+
+//! Pre_loader
+
+var loader = document.getElementById("pre_Loader");
+window.addEventListener("load", function () {
+    loader.style.display = "none";
+})

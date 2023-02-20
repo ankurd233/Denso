@@ -132,6 +132,52 @@ footer.ftr_btm_sec {
 
 
 
+// ! Back to top Button
+
+#btn-back-to-top {
+    width: 40px;
+    height: 40px;
+    background-color: $Primary_Color;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    outline: none;
+    border-radius: 50px;
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    transition: 0.5s all;
+    cursor: pointer;
+    z-index: 5555;
+    transition: 0.5s all;
+    border: 1px solid $Primary_Color;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    display: none;
+}
+
+#btn-back-to-top svg {
+    font-size: 15px;
+    color: $Color_White;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 @media (max-width:1440px) {
 
     .footer_sec .ftr_otr .ftr_inr .scl_icns a {
