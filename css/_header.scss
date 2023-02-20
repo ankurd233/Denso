@@ -1,0 +1,249 @@
+.main_header {
+    position: relative;
+    z-index: 1;
+
+    .top_bar {
+        padding: 3.5rem 0;
+        background-color: rgba($color: $Primary_Color, $alpha: 0.75);
+
+
+        .top_list {
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            a {
+                @include flex;
+                gap: 0.5rem;
+                font-size: 2.2rem;
+                font-family: $Poppins;
+                color: $Color_White;
+            }
+
+            .logo {
+                font-size: 3.5rem;
+                font-weight: 700;
+                gap: 1.5rem;
+            }
+
+            .fa-phone {
+                padding: 0.3rem;
+                background-color: $Color_White;
+                color: $Primary_Color;
+                border-radius: 0.2rem;
+            }
+
+        }
+
+        input[type=text] {
+            width: 50rem;
+            padding: 1.5rem;
+            padding-right: 4rem;
+            font-size: 2rem;
+            font-family: $Poppins;
+            background-color: $Color_White;
+            position: relative;
+            background: url(../images/glass.webp) no-repeat;
+            background-color: #fff;
+            background-size: 2.5rem 2.5rem;
+            background-position: 98% center;
+
+
+            object-fit: contain;
+
+
+            &::placeholder {
+                font-size: 2rem;
+                font-family: $Poppins;
+                opacity: 0.5;
+            }
+
+        }
+    }
+
+    .nav_otr {
+        background-color: $Color_black;
+
+        .nav_sec {
+            @include flex;
+            justify-content: flex-start;
+            width: 100%;
+
+            a {
+                font-size: 2.2rem;
+                font-family: $Poppins;
+                color: $Color_White;
+                padding: 3rem 2.5rem;
+                background-color: $Color_black;
+                transition: 0.5s all ease;
+
+                &:hover {
+                    background-color: rgba($color: $Primary_Color, $alpha: 0.75);
+                    color: $Color_black;
+                }
+            }
+        }
+    }
+
+    .nav_bar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .lgn_btn {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            a {
+                font-size: 2.2rem;
+                font-family: "Poppins", sans-serif;
+                color: #fff;
+                padding: 3rem 2.5rem;
+                background-color: #060707;
+                transition: .5s all ease;
+
+                &:hover {
+                    background-color: rgba($color: $Primary_Color, $alpha: 0.75);
+                    color: $Color_black;
+                }
+            }
+        }
+    }
+
+}
+
+header .hamburger {
+    display: none;
+    position: absolute;
+    cursor: pointer;
+    right: 20px;
+    top: 50%;
+    transform: translate(-5%, -50%);
+    transition: all 0.7s ease;
+}
+
+header .hamburger div {
+    width: 20px;
+    height: 2px;
+    background: #ffffff;
+    margin: 5px;
+    transition: all 0.3s ease;
+}
+
+header .hamburger.active .line1 {
+    transform: rotate(-45deg) translate(-4px, 5px);
+}
+
+header .hamburger.active .line2 {
+    opacity: 0;
+    visibility: hidden;
+}
+
+header .hamburger.active .line3 {
+    transform: rotate(45deg) translate(-5px, -6px);
+}
+
+
+// ! Responsive 
+
+@media (max-width:991px) {
+
+    .main_header .nav_otr {
+        position: relative;
+    }
+
+    header .hamburger {
+        display: block;
+    }
+
+    .main_header .nav_otr .nav_sec {
+        flex-direction: column;
+        width: fit-content;
+        position: absolute;
+        right: 0;
+        top: 100%;
+        background-color: $Primary_Color;
+        display: none;
+        z-index: 9999;
+
+        li {
+            padding: 0 20px;
+            background-color: $Primary_Color;
+            text-align: center;
+            transform: rotateX(90deg);
+            transform-origin: bottom;
+            box-shadow: rgba(0, 0, 0, 0.40) 0px 3px 30px;
+            animation: transform_LI 600ms ease-in-out forwards;
+
+            &:nth-child(2) {
+                animation-delay: 200ms;
+            }
+
+            &:nth-child(3) {
+                animation-delay: 400ms;
+            }
+
+            &:nth-child(4) {
+                animation-delay: 600ms;
+            }
+
+            &:nth-child(5) {
+                animation-delay: 800ms;
+            }
+
+            &:nth-child(6) {
+                animation-delay: 1000ms;
+            }
+        }
+
+        a {
+            color: $Color_black;
+            background-color: $Primary_Color;
+        }
+    }
+
+    .main_header .nav_otr .nav_sec.active {
+        display: block;
+    }
+
+    .main_header .nav_bar {
+        justify-content: end;
+        padding-right: 20px;
+    }
+
+    @keyframes transform_LI {
+        to {
+            transform: rotateX(0);
+            opacity: 1;
+        }
+    }
+}
+
+@media (max-width:950px) {
+
+    .main_header .top_bar .top_list {
+        flex-wrap: wrap;
+        justify-content: space-around;
+        gap: 20px;
+    }
+}
+
+@media (max-width:767px) {
+
+    .main_header .nav_bar .lgn_btn {
+        margin-right: 30px;
+    }
+
+    .main_header .nav_otr .nav_sec a {
+        padding: 2rem 2.5rem;
+    }
+}
+
+@media (max-width:420px) {
+
+    .main_header .top_bar .top_list a {
+        font-size: 2rem;
+    }
+}

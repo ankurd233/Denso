@@ -1,0 +1,275 @@
+.rqst_sec {
+    @include cmn_pdng;
+    position: relative;
+    isolation: isolate;
+
+    &:after {
+        position: absolute;
+        content: '';
+        inset: 0;
+        background-color: rgba($color: $Color_White, $alpha: 0.8);
+        z-index: -1;
+    }
+
+
+    .rqst_hdng {
+        position: relative;
+        color: $Color_black;
+        text-align: center;
+        font-size: 4.5rem;
+        font-weight: 400;
+        font-family: "Lato", sans-serif;
+        text-transform: uppercase;
+        margin-bottom: 100px;
+
+        &:after {
+            position: absolute;
+            content: "";
+            background-color: $Primary_Color;
+            left: 50%;
+            transform: translateX(-50%);
+            bottom: 0;
+            width: 30px;
+            height: 8px;
+            border-radius: 10px;
+        }
+    }
+
+    .rqst_form_otr {
+        width: 60%;
+        margin-inline: auto;
+        padding: 50px;
+        background-color: $Color_White;
+        border-radius: 20px;
+        box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px,
+            inset 0 0 5px rgba(60, 64, 67, 0.3);
+    }
+
+    .input-box {
+        position: relative;
+        margin-bottom: 40px;
+
+        &:last-child {
+            margin: 0;
+        }
+    }
+
+    .input-box input {
+        font-weight: 500;
+        font-size: 2.3rem;
+        color: #495055;
+        width: 350px;
+        padding: 15px 15px;
+        border-bottom: 2px solid $Color_black;
+        outline: none;
+        width: 100%;
+        font-family: $lato;
+        transition: 0.5s all;
+        border-radius: 10px;
+    }
+
+    .input-box span.placeholder {
+        position: absolute;
+        padding: 0 4px;
+        font-family: $lato;
+        color: $Color_black;
+        font-size: 2.5rem;
+        bottom: 0;
+        left: 17px;
+        padding-bottom: 10px;
+        transition: all 0.2s;
+        transform-origin: 0% 0%;
+        background: none;
+        pointer-events: none;
+        transition: 0.5s all;
+    }
+
+    .input-box input:valid~span.placeholder,
+    .input-box input:focus~span.placeholder {
+        transform: scale(0.5) translateY(-50px);
+
+    }
+
+    .input-box textarea:valid~span.placeholder,
+    .input-box textarea:focus~span.placeholder {
+        transform: scale(0.5) translateY(-220px);
+    }
+
+    .input-box input:focus,
+    .input-box textarea:focus {
+        color: $Color_black;
+        border-color: $Primary_Color;
+    }
+
+    .input-box input:focus~span.placeholder {
+        color: #284B63;
+    }
+
+    .input-box textarea {
+        width: 100%;
+        border-bottom: 2px solid $Color_black;
+        border-radius: 10px;
+        padding: 17px;
+        height: 150px;
+        resize: none;
+        font-size: 2.3rem;
+        font-family: $lato;
+
+        &::placeholder {
+            color: $Color_black;
+            font-size: 2.5rem;
+            font-family: $lato;
+        }
+    }
+
+    .input-box input[type=submit] {
+        width: 200px;
+        background-color: $Color_Orange;
+        padding: 20px;
+        cursor: pointer;
+        color: $Color_White;
+        border: 2px solid $Color_Orange;
+        margin-inline: auto;
+
+        &:hover {
+            background-color: $Color_White;
+            color: $Color_Orange;
+        }
+    }
+}
+
+.rqst_btm_main {
+    background-color: $Color_black;
+}
+
+.rqst_btm_otr {
+    padding: 20px 0;
+    @include flex;
+    justify-content: space-between;
+
+    .rqst_btm_inr {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+
+        &:hover span {
+            color: $Primary_Color;
+            border-color: $Primary_Color;
+        }
+
+        span {
+            display: inline-block;
+            color: $Color_White;
+            font-size: 2.2rem;
+            width: 45px;
+            height: 45px;
+            border: 1px solid $Color_White;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: 0.5s all;
+        }
+
+        p {
+            display: inline-block;
+            color: $Color_White;
+            font-size: 2.2rem;
+            font-family: $Poppins;
+        }
+
+        a {
+            color: $Color_White;
+            font-size: 2.2rem;
+            font-family: $Poppins;
+            transition: 0.5s all;
+
+            &:hover {
+                color: $Primary_Color;
+            }
+        }
+    }
+}
+
+@media (max-width:1280px) {
+    .rqst_btm_otr .rqst_btm_inr span {
+
+        width: 35px;
+        height: 35px;
+    }
+}
+
+@media (max-width:1080px) {
+
+    .rqst_sec .input-box input:valid~span.placeholder,
+    .rqst_sec .input-box input:focus~span.placeholder {
+        transform: scale(0.8) translateY(-50px);
+    }
+
+    .rqst_sec .input-box textarea:valid~span.placeholder,
+    .rqst_sec .input-box textarea:focus~span.placeholder {
+        transform: scale(0.8) translateY(-155px);
+    }
+}
+
+@media (max-width:991px) {
+
+    .rqst_sec .rqst_form_otr {
+        width: 75%;
+    }
+}
+
+@media (max-width:575px) {
+
+    .rqst_sec .rqst_hdng {
+        font-size: 3.8rem;
+        padding-bottom: 5px;
+    }
+
+    .rqst_sec .rqst_form_otr {
+        width: 80%;
+    }
+
+    .rqst_btm_otr {
+        flex-wrap: wrap;
+        justify-content: space-around;
+        gap: 20px;
+    }
+
+    .rqst_sec .rqst_hdng {
+        margin-bottom: 40px;
+    }
+}
+
+@media (max-width: 420px) {
+
+    .rqst_sec .rqst_form_otr {
+        width: 100%;
+        padding: 5rem 2rem;
+    }
+
+    .rqst_sec .rqst_hdng {
+
+        font-size: 2.8rem;
+
+        &:after {
+            height: 6px;
+        }
+    }
+
+    .rqst_sec .input-box span.placeholder {
+        font-size: 2rem;
+    }
+
+    .rqst_sec .input-box input {
+        font-size: 1.8rem;
+        border-width: 1px;
+    }
+
+    .rqst_sec .input-box textarea {
+        border-width: 1px;
+    }
+
+    .rqst_sec .input-box input[type=submit] {
+        padding: 10px 20px;
+    }
+}

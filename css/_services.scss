@@ -1,0 +1,275 @@
+.services {
+    @include cmn_pdng;
+
+    .srvc_hdng {
+        position: relative;
+        font-family: $lato;
+        font-size: 4.5rem;
+        text-align: center;
+        text-transform: uppercase;
+        font-weight: 400;
+
+        &:after {
+            position: absolute;
+            content: '';
+            background-color: $Primary_Color;
+            left: 50%;
+            transform: translateX(-50%);
+            bottom: 0;
+            width: 30px;
+            height: 8px;
+            border-radius: 10px;
+        }
+    }
+
+    .cntnt_para {
+
+        margin: 25px 0 50px 0;
+
+        p {
+            font-size: 2.5rem;
+            font-family: $lato;
+            width: 65%;
+            margin-inline: auto;
+            text-align: center;
+
+        }
+    }
+
+    P {
+        font-size: 2.2rem;
+        text-align: center;
+        font-family: $lato;
+        margin: 25px 0 50px 0;
+    }
+
+    .srvc_flx_otr {
+        margin-top: 2.5rem;
+        display: grid;
+        grid-template-columns: repeat(5, 19%);
+        place-items: center;
+        justify-content: space-between;
+        margin-bottom: 100px;
+
+        .srvc_flx_inr {
+            .img_otr {
+                width: 29rem;
+                height: 29rem;
+                background: linear-gradient(to bottom, $Primary_Color , #12e478);
+                display: grid;
+                place-items: center;
+                border-radius: 50%;
+
+                img {
+                    width: 30%;
+                }
+            }
+
+            h5 {
+                margin-top: 10px;
+                font-size: 2.2rem;
+                font-family: $lato;
+                text-align: center;
+            }
+        }
+    }
+
+    .srvc_btn {
+        text-align: center;
+    }
+
+    .abt_trnsport_otr {
+        background-color: #f7f6f6;
+
+    }
+
+    .abt_trnsport {
+        max-width: 92.5%;
+        margin-left: auto;
+        margin-top: 70px;
+
+
+        .abt_trnsport_otr {
+            @include flex;
+            justify-content: space-between;
+
+
+            .abt_trnsport_inr {
+                width: 49%;
+
+                h2 {
+                    font-size: 4.5rem;
+                    font-family: $lato;
+                    position: relative;
+                    font-weight: 400;
+
+                    &:after {
+                        position: absolute;
+                        content: "";
+                        background-color: $Primary_Color;
+                        left: 0;
+                        bottom: 0;
+                        width: 30px;
+                        height: 8px;
+                        border-radius: 10px;
+                    }
+                }
+
+                p {
+                    text-align: left;
+                    color: #727272;
+
+                }
+
+                img {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width:1080px) {
+
+    .services .srvc_flx_otr .srvc_flx_inr .img_otr {
+        width: 25rem;
+        height: 25rem;
+    }
+}
+
+@media (max-width:991px) {
+
+    .services .cntnt_para p {
+        width: 75%;
+    }
+
+    .services .abt_trnsport .abt_trnsport_otr .abt_trnsport_inr .img_otr {
+        height: 270px;
+
+        img {
+            height: 100%;
+        }
+    }
+
+    .services .srvc_flx_otr {
+        row-gap: 30px;
+        justify-content: space-around;
+        display: flex;
+        flex-wrap: wrap;
+
+        .srvc_flx_inr {
+            width: 50%;
+
+            .img_otr {
+                margin-inline: auto
+            }
+        }
+    }
+
+    .services .abt_trnsport .abt_trnsport_otr {
+        flex-direction: column;
+        row-gap: 30px;
+        padding-block: 30px;
+
+        .abt_trnsport_inr {
+            width: 60%;
+            text-align: center;
+        }
+    }
+
+    .services .abt_trnsport {
+        max-width: 93%;
+        margin-inline: auto;
+    }
+
+    .services .abt_trnsport .abt_trnsport_otr .abt_trnsport_inr h2 {
+        display: inline-block;
+    }
+
+    .services .abt_trnsport .abt_trnsport_otr .abt_trnsport_inr p {
+        text-align: center;
+    }
+
+    .services .abt_trnsport .abt_trnsport_otr .abt_trnsport_inr .img_otr {
+        height: auto;
+    }
+
+    .services .abt_trnsport .abt_trnsport_otr .abt_trnsport_inr h2:after {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
+
+@media (max-width: 991px) {
+
+    .services .abt_trnsport .abt_trnsport_otr .abt_trnsport_inr {
+        width: 80%;
+    }
+}
+
+@media (max-width: 575px) {
+
+    .services .srvc_hdng {
+
+        font-size: 3.8rem;
+        padding-bottom: 5px;
+    }
+
+    .services .cntnt_para p {
+        width: auto;
+    }
+
+    .services .abt_trnsport .abt_trnsport_otr .abt_trnsport_inr h2 {
+
+        font-size: 3.8rem;
+        padding-bottom: 5px;
+    }
+
+    .services .srvc_flx_otr .srvc_flx_inr {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .services .srvc_flx_otr .srvc_flx_inr .img_otr {
+        width: 40rem;
+        height: 40rem;
+    }
+
+    .services .srvc_flx_otr {
+        margin-bottom: 40px;
+    }
+}
+
+@media (max-width: 420px) {
+
+    .services .srvc_hdng {
+        font-size: 2.8rem;
+
+        &:after {
+            height: 6px;
+        }
+    }
+
+    .services .cntnt_para p,
+    .services P {
+        font-size: 2rem;
+    }
+
+    .services .abt_trnsport .abt_trnsport_otr .abt_trnsport_inr h2 {
+
+        font-size: 2.8rem;
+
+        &:after {
+            height: 6px;
+        }
+    }
+
+    .services .abt_trnsport .abt_trnsport_otr .abt_trnsport_inr {
+        width: 100%;
+    }
+
+    .services .srvc_flx_otr .srvc_flx_inr .img_otr {
+        width: 30rem;
+        height: 30rem;
+    }
+}

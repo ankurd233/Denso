@@ -1,0 +1,82 @@
+// General CSS
+
+.btn {
+    @include button;
+
+    &::before {
+        position: absolute;
+        content: "";
+        right: 0;
+        bottom: 0;
+        background-color: $Color_black;
+        transition: all 0.3s ease;
+        height: 0%;
+        width: 2px;
+    }
+
+    &::after {
+        position: absolute;
+        content: "";
+        right: 0;
+        bottom: 0;
+        background-color: $Color_black;
+        transition: all 0.3s ease;
+        width: 0%;
+        height: 2px;
+    }
+
+    &:hover {
+        background: transparent;
+        color: $Color_black;
+    }
+
+    &:hover::before {
+        height: 100%;
+        transition: all 0.7s ease;
+    }
+
+    &:hover::after {
+        width: 100%;
+        transition: all 0.7s ease;
+    }
+
+    span {
+        padding: 1.5rem 2.5rem;
+        display: block;
+        position: relative;
+        font-size: 2.5rem;
+        font-family: $Poppins;
+
+        &::before {
+            position: absolute;
+            content: "";
+            left: 0;
+            top: 0;
+            background-color: $Color_black;
+            transition: all 0.3s ease;
+            width: 2px;
+            height: 0%;
+        }
+
+        &::after {
+            position: absolute;
+            content: "";
+            left: 0;
+            top: 0;
+            background-color: $Color_black;
+            transition: all 0.3s ease;
+            width: 0;
+            height: 2px;
+        }
+    }
+
+    &:hover span::before {
+        height: 100%;
+        transition: all 0.7s ease;
+    }
+
+    &:hover span::after {
+        width: 100%;
+        transition: all 0.7s ease;
+    }
+}

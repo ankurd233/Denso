@@ -1,0 +1,166 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Open+Sans:wght@300;400;500;600;700;800&family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    scrollbar-width: thin;
+    scrollbar-color: #3dde8b #ffffff;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* scrollbar */
+
+/* Chrome, Edge, and Safari */
+
+*::-webkit-scrollbar {
+    width: 1.5rem;
+}
+
+*::-webkit-scrollbar-thumb {
+    background: #3dde8b;
+    border-radius: 10px;
+    border: 3px solid #ffffff;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+    background: #3dde8b;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 62.5%;
+}
+
+body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+}
+
+a {
+    display: inline-block;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+    max-width: 100%;
+}
+
+svg {
+    vertical-align: middle !important;
+}
+
+input,
+button,
+textarea,
+select {
+    font: inherit;
+    display: block;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    /* display: none; <- Crashes Chrome on hover */
+    -webkit-appearance: none;
+    margin: 0;
+    /* <-- Apparently some margin are still there even though it's hidden */
+}
+
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    margin: 0;
+    overflow-wrap: break-word;
+}
+
+span {
+    display: block;
+}
+
+.container {
+    max-width: 85%;
+    margin-inline: auto;
+}
+
+// Fonts
+
+$lato: 'Lato', sans-serif;
+$Open_sans: 'Open Sans', sans-serif;
+$Poppins: 'Poppins', sans-serif;
+
+// Colors
+
+$Primary_Color: #3dde8b;
+$Color_White: #ffffff;
+$Color_black: #060707;
+$Color_Orange: #f97218;
+
+@media (max-width:1680px) {
+
+    html {
+        font-size: 53%;
+    }
+
+}
+
+@media (max-width:1440px) {
+
+    html {
+        font-size: 47%;
+    }
+
+    .container {
+        max-width: 90%;
+    }
+}
+
+@media (max-width:1280px) {
+
+    html {
+        font-size: 42%;
+    }
+
+}
+
+@media (max-width:1080px) {
+
+    .container {
+        max-width: 93%;
+    }
+
+
+}
+
+@media (max-width:767px) {
+
+    .container {
+        max-width: 95%;
+    }
+}
+
+@media (max-width:575px) {
+
+    .container {
+        max-width: 97%;
+    }
+}
