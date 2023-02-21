@@ -1,3 +1,22 @@
+//! Sticky /  fixed Navbar
+
+$(function () {
+    $(window).scroll(function () {
+        if ($(window).scrollTop() > 200) {
+            $(".nav_otr").addClass("sticky");
+        } else {
+            $(".nav_otr").removeClass("sticky");
+        }
+    });
+});
+
+
+
+
+
+
+//! Banner word Animation
+
 var words = ['AUTOS & TRANSPORTATION'],
     part,
     i = 0,
@@ -45,13 +64,6 @@ var wordflick = function () {
 $(document).ready(function () {
     wordflick();
 });
-
-
-
-
-
-
-
 
 
 

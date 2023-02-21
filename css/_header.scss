@@ -146,6 +146,57 @@ header .hamburger.active .line3 {
 }
 
 
+header.main_header .nav_otr.sticky {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    transition: 0.5s all;
+    animation: slide-down 0.7s linear;
+    z-index: 99999;
+}
+
+header.main_header .nav_otr.sticky .nav_sec a {
+    padding: 1.5rem 2.5rem;
+
+}
+
+header.main_header .nav_otr.sticky .nav_bar .lgn_btn a {
+    padding: 1.5rem 2.5rem;
+}
+
+@keyframes slide-down {
+    0% {
+        opacity: 0;
+        transform: translateY(-100%);
+        -moz-transform: translateY(-100%);
+        -webkit-transform: translateY(-100%);
+        -o-transform: translateY(-100%);
+        -ms-transform: translateY(-100%);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+        -moz-transform: translateY(0);
+        -webkit-transform: translateY(0);
+        -o-transform: translateY(0);
+        -ms-transform: translateY(0);
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 // ! Responsive 
 
 @media (max-width:991px) {
